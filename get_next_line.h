@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsouchet <bsouchet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/02/02 09:23:11 by bsouchet          #+#    #+#             */
-/*   Updated: 2016/02/02 16:40:35 by bsouchet         ###   ########.fr       */
+/*   Created: 2016/02/04 13:59:51 by bsouchet          #+#    #+#             */
+/*   Updated: 2016/02/04 14:18:11 by bsouchet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include "libft/includes/libft.h"
 # include <fcntl.h>
 
-# define BUFF_SIZE 1
+# define BUF_SIZE 1
 
-int		get_next_line(int const fd, char **line);
+int				get_next_line(int const fd, char **line);
 
 #endif
