@@ -6,7 +6,7 @@
 /*   By: bsouchet <bsouchet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/04 13:58:42 by bsouchet          #+#    #+#             */
-/*   Updated: 2016/02/04 14:07:16 by bsouchet         ###   ########.fr       */
+/*   Updated: 2016/02/05 14:20:19 by bsouchet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ static int		ft_read(char **str, int fd)
 {
 	int		ret;
 	char	*s;
-	char	buf[BUF_SIZE + 1];
+	char	buf[BUFF_SIZE + 1];
 
-	if ((ret = read(fd, buf, BUF_SIZE)) == -1)
+	if ((ret = read(fd, buf, BUFF_SIZE)) == -1)
 		return (-1);
 	buf[ret] = '\0';
 	s = *str;
@@ -59,13 +59,13 @@ int				get_next_line(int const fd, char **line)
 
 	if (str == 0)
 		str = "";
-	if (!line || BUF_SIZE < 1)
+	if (!line || BUFF_SIZE < 1)
 		return (-1);
-	ret = BUF_SIZE;
+	ret = BUFF_SIZE;
 	while (line)
 	{
 		s = str;
-		while (*s || ret < BUF_SIZE)
+		while (*s || ret < BUFF_SIZE)
 		{
 			if (*s == '\n' || *s == 0 || *s == -1)
 				return (ft_get_line(&str, line, s));
